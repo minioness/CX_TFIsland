@@ -5,9 +5,12 @@ import com.dxschool.lightme.caseuser.controller.dto.CaseUserRequest;
 import com.dxschool.lightme.caseuser.controller.dto.CaseUserResponse;
 import com.dxschool.lightme.caseuser.controller.dto.CaseUserUpdateRequest;
 import com.dxschool.lightme.caseuser.service.CaseUserService;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -37,5 +40,10 @@ public class CaseUserController {
                                            @User Long userId) {
         caseUserService.updateCaseUser(request.artistId(), userId);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/near")
+    public ResponseEntity<List<CaseUserResponse>> getUsersNearBy(@User Long userId) {
+        return ResponseEntity.ok(caseUserService.findNearby(userId));
     }
 }

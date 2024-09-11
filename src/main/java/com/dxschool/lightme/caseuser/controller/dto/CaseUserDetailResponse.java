@@ -1,6 +1,6 @@
 package com.dxschool.lightme.caseuser.controller.dto;
 
-import com.dxschool.lightme.artist.controller.dto.ArtistScheduleResponse;
+import com.dxschool.lightme.schedule.controller.dto.ArtistScheduleResponse;
 
 import java.util.List;
 

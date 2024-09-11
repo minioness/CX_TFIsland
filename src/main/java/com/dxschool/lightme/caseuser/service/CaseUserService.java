@@ -1,12 +1,12 @@
 package com.dxschool.lightme.caseuser.service;
 
-import com.dxschool.lightme.artist.controller.dto.ArtistScheduleResponse;
+import com.dxschool.lightme.schedule.controller.dto.ArtistScheduleResponse;
+import com.dxschool.lightme.artist.service.ArtistService;
 import com.dxschool.lightme.caseuser.controller.dto.*;
 import com.dxschool.lightme.artist.domain.Artist;
-import com.dxschool.lightme.artist.domain.ArtistSchedule;
+import com.dxschool.lightme.schedule.domain.ArtistSchedule;
 import com.dxschool.lightme.caseuser.domain.CaseUser;
 import com.dxschool.lightme.artist.domain.repository.ArtistRepository;
-import com.dxschool.lightme.artist.domain.repository.ArtistScheduleRepository;
 import com.dxschool.lightme.caseuser.domain.repository.CaseUserRepository;
 import com.dxschool.lightme.common.util.AddressUtil;
 import jakarta.servlet.http.HttpSession;
@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
-import java.util.Comparator;
+import java.util.List;
 import java.util.NoSuchElementException;
 
 @Service
@@ -25,7 +25,7 @@ public class CaseUserService {
 
     private final CaseUserRepository caseUserRepository;
     private final ArtistRepository artistRepository;
-    private final ArtistScheduleRepository artistScheduleRepository;
+    private final ArtistService artistService;
     private final HttpSession httpSession;
 
     public CaseUserResponse find(Long userId) {
@@ -52,22 +52,12 @@ public class CaseUserService {
         caseUserRepository.save(caseUser);
     }
 
-    private ArtistSchedule getClosestSchedule(CaseUser caseUser) {
-        return artistScheduleRepository
-                .findAllByArtistId(caseUser.getThemeArtist().getArtistId()).stream()
-                .filter(schedule -> schedule.getScheduledAt().isAfter(LocalDateTime.now())) // 현재 시간 이후의 일정만 필터링
-                .min(Comparator.comparing(schedule ->
-                        Math.abs(Duration.between(LocalDateTime.now(), schedule.getScheduledAt()).toMillis())
-                ))
-                .orElseThrow(NoSuchElementException::new);
-    }
-
     public CaseUserDetailResponse getCaseUserDetail(Long userId) {
         CaseUser caseUser = caseUserRepository
                 .findById(userId)
                 .orElseThrow(NoSuchElementException::new);
 
-        ArtistSchedule closestSchedule = getClosestSchedule(caseUser);
+        ArtistSchedule closestSchedule = artistService.getClosestSchedule(caseUser);
         int dDay = (int)Duration.between(LocalDateTime.now(), closestSchedule.getScheduledAt()).toDays();
 
         return CaseUserDetailResponse.of(
@@ -94,5 +84,16 @@ public class CaseUserService {
                 .orElseThrow(NoSuchElementException::new);
 
         caseUser.updateThemeArtist(artist);
+    }
+
+    public List<CaseUserResponse> findNearby(Long userId) {
+        CaseUser caseUser = caseUserRepository.findById(userId)
+                .orElseThrow(NoSuchElementException::new);
+
+        Long addressId = caseUser.getAddress().getAddressId();
+        return caseUserRepository.findTop20ByAddress_AddressId(addressId).stream()
+                .map(CaseUserResponse::from)
+                .toList();
+
     }
 }
