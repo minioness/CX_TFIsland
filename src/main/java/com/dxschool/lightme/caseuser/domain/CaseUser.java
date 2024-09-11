@@ -1,5 +1,6 @@
-package com.dxschool.lightme.domain;
+package com.dxschool.lightme.caseuser.domain;
 
+import com.dxschool.lightme.artist.domain.Artist;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
@@ -24,30 +25,38 @@ public class CaseUser {
     @ColumnDefault("0")
     private int brightness;
 
-    @ColumnDefault("0")
-    private int color;
+    @ColumnDefault("FFFFFF")
+    private String color;
 
     @ColumnDefault("0")
     private Long point;
 
-    private String profileUrl;
+    private String profileLink;
 
-    @Column(nullable = false)
     @ManyToOne
+    @JoinColumn(nullable = false)
     private Artist themeArtist;
 
     @OneToMany
     @Builder.Default
+    @JoinColumn(name = "case_user_id")
     private List<Image> images = new ArrayList<>();
 
     @OneToMany
     @Builder.Default
+    @JoinColumn(name = "case_user_id")
     private List<Music> playlist = new ArrayList<>();
 
     @OneToMany
     @Builder.Default
+    @JoinColumn(name = "case_user_id")
     private List<Video> videos = new ArrayList<>();
 
     @ManyToOne
+    @JoinColumn(name = "address_id")
     private Address address;
+
+    public void updateThemeArtist(Artist artist) {
+        this.themeArtist = artist;
+    }
 }

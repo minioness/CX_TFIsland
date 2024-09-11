@@ -1,5 +1,6 @@
-package com.dxschool.lightme.domain;
+package com.dxschool.lightme.caseuser.domain;
 
+import com.dxschool.lightme.common.domain.Category;
 import jakarta.persistence.*;
 import lombok.*;
 

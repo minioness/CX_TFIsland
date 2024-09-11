@@ -1,4 +1,4 @@
-package com.dxschool.lightme.domain;
+package com.dxschool.lightme.caseuser.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -8,11 +8,14 @@ import lombok.*;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
-public class Image {
+@Table(name = "video")
+public class Video {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long imageId;
+    private Long videoId;
+
+    private String title;
 
     @Column(nullable = false)
-    private String imageUrl;
+    private String videoUrl;
 }

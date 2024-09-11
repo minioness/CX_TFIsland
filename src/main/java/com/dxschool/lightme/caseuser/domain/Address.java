@@ -1,4 +1,4 @@
-package com.dxschool.lightme.domain;
+package com.dxschool.lightme.caseuser.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,7 +16,7 @@ public class Address {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long addressId;
 
-    private String province;
     private String city;
     private String district;
+    private String street;
 }
