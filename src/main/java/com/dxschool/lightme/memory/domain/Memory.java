@@ -1,5 +1,7 @@
-package com.dxschool.lightme.domain;
+package com.dxschool.lightme.memory.domain;
 
+import com.dxschool.lightme.caseuser.domain.CaseUser;
+import com.dxschool.lightme.common.domain.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -11,7 +13,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
-public class Memory {
+public class Memory extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long memoryId;
@@ -24,7 +26,7 @@ public class Memory {
     @Column(nullable = false)
     private String content;
 
-    private String colorCode;
+    private String color;
 
     private LocalDate memoryDate;
 
