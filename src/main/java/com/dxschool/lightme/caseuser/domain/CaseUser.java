@@ -25,7 +25,7 @@ public class CaseUser {
     @ColumnDefault("0")
     private int brightness;
 
-    @ColumnDefault("FFFFFF")
+    @ColumnDefault("'FFFFFF'")
     private String color;
 
     @ColumnDefault("0")
@@ -37,17 +37,17 @@ public class CaseUser {
     @JoinColumn(nullable = false)
     private Artist themeArtist;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @Builder.Default
     @JoinColumn(name = "case_user_id")
     private List<Image> images = new ArrayList<>();
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @Builder.Default
     @JoinColumn(name = "case_user_id")
     private List<Music> playlist = new ArrayList<>();
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @Builder.Default
     @JoinColumn(name = "case_user_id")
     private List<Video> videos = new ArrayList<>();

@@ -5,7 +5,6 @@ import com.dxschool.lightme.caseuser.controller.dto.CaseUserRequest;
 import com.dxschool.lightme.caseuser.controller.dto.CaseUserResponse;
 import com.dxschool.lightme.caseuser.controller.dto.CaseUserUpdateRequest;
 import com.dxschool.lightme.caseuser.service.CaseUserService;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,8 +1,8 @@
 -- Artist 데이터 삽입
-INSERT INTO artist (artist_id, artist_name, color_code, company, logo_link, score)
+INSERT INTO artist (artist_id, artist_name, color, company, logo, score)
 VALUES (1, 'Artist 1', 'FF5733', 'Company A', 'https://linkto.logo1.com', 0);
 
-INSERT INTO artist (artist_id, artist_name, color_code, company, logo_link, score)
+INSERT INTO artist (artist_id, artist_name, color, company, logo, score)
 VALUES (2, 'Artist 2', '33FF57', 'Company B', 'https://linkto.logo2.com', 0);
 
 -- ArtistSchedule 데이터 삽입 (Artist 1의 스케줄 3개)
