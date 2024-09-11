@@ -18,18 +18,18 @@ public class MissionController {
     private final MissionService missionService;
 
     @GetMapping
-    public ResponseEntity<List<MissionResponse>> getMissions(@User Long userId) {
+    public ResponseEntity<List<MissionResponse>> getMissions(@SessionAttribute(name = "userId") Long userId) {
         return ResponseEntity.ok(missionService.findAll(userId));
     }
 
     @PostMapping("/{missionId}")
-    public ResponseEntity<Void> acceptMission(@PathVariable Long missionId, @User Long userId) {
+    public ResponseEntity<Void> acceptMission(@PathVariable Long missionId, @SessionAttribute(name = "userId") Long userId) {
         missionService.accept(userId, missionId);
         return ResponseEntity.noContent().build();
     }
 
     @DeleteMapping("/{missionId}")
-    public ResponseEntity<Void> completeMission(@PathVariable Long missionId, @User Long userId) {
+    public ResponseEntity<Void> completeMission(@PathVariable Long missionId, @SessionAttribute(name = "userId") Long userId) {
         missionService.complete(userId, missionId);
         return ResponseEntity.noContent().build();
     }

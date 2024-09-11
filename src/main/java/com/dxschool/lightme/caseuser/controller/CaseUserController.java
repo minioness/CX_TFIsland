@@ -19,12 +19,12 @@ public class CaseUserController {
     private final CaseUserService caseUserService;
 
     @GetMapping
-    public ResponseEntity<CaseUserResponse> getUserInfo(@User Long userId) {
+    public ResponseEntity<CaseUserResponse> getUserInfo(@SessionAttribute(name = "userId") Long userId) {
         return ResponseEntity.ok(caseUserService.find(userId));
     }
 
     @GetMapping("/main")
-    public ResponseEntity<CaseUserDetailResponse> getUserDetailInfo(@User Long userId) {
+    public ResponseEntity<CaseUserDetailResponse> getUserDetailInfo(@SessionAttribute(name = "userId") Long userId) {
         return ResponseEntity.ok(caseUserService.getCaseUserDetail(userId));
     }
 
@@ -36,13 +36,13 @@ public class CaseUserController {
 
     @PatchMapping
     public ResponseEntity<Void> updateUser(@RequestBody CaseUserUpdateRequest request,
-                                           @User Long userId) {
+                                           @SessionAttribute(name = "userId") Long userId) {
         caseUserService.updateCaseUser(request.artistId(), userId);
         return ResponseEntity.noContent().build();
     }
 
     @GetMapping("/near")
-    public ResponseEntity<List<CaseUserResponse>> getUsersNearBy(@User Long userId) {
+    public ResponseEntity<List<CaseUserResponse>> getUsersNearBy(@SessionAttribute(name = "userId") Long userId) {
         return ResponseEntity.ok(caseUserService.findNearby(userId));
     }
 }

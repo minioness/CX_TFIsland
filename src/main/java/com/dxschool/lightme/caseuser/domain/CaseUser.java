@@ -3,8 +3,6 @@ package com.dxschool.lightme.caseuser.domain;
 import com.dxschool.lightme.artist.domain.Artist;
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.ColumnDefault;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,14 +20,14 @@ public class CaseUser {
     @Column(nullable = false)
     private String nickname;
 
-    @ColumnDefault("0")
-    private int brightness;
+    @Builder.Default
+    private int brightness = 0;
 
-    @ColumnDefault("'FFFFFF'")
-    private String color;
+    @Builder.Default
+    private String color = "FFFFFF";
 
-    @ColumnDefault("0")
-    private Long point;
+    @Builder.Default
+    private Long point = 0L;
 
     private String profileLink;
 
@@ -37,17 +35,17 @@ public class CaseUser {
     @JoinColumn(nullable = false)
     private Artist themeArtist;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @Builder.Default
     @JoinColumn(name = "case_user_id")
     private List<Image> images = new ArrayList<>();
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @Builder.Default
     @JoinColumn(name = "case_user_id")
     private List<Music> playlist = new ArrayList<>();
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @Builder.Default
     @JoinColumn(name = "case_user_id")
     private List<Video> videos = new ArrayList<>();

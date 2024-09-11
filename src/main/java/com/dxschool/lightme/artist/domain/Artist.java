@@ -7,6 +7,9 @@ import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
 
 @Getter
+@Builder
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
 public class Artist {
     @Id
@@ -22,4 +25,5 @@ public class Artist {
 
     @ColumnDefault("0")
     private long score;
+
 }

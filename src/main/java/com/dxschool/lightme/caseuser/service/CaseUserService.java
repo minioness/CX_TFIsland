@@ -1,5 +1,7 @@
 package com.dxschool.lightme.caseuser.service;
 
+import com.dxschool.lightme.caseuser.domain.Address;
+import com.dxschool.lightme.caseuser.domain.repository.AddressRepository;
 import com.dxschool.lightme.schedule.controller.dto.ArtistScheduleResponse;
 import com.dxschool.lightme.artist.service.ArtistService;
 import com.dxschool.lightme.caseuser.controller.dto.*;
@@ -25,6 +27,7 @@ public class CaseUserService {
 
     private final CaseUserRepository caseUserRepository;
     private final ArtistRepository artistRepository;
+    private final AddressRepository addressRepository;
     private final ArtistService artistService;
     private final HttpSession httpSession;
 
@@ -41,15 +44,23 @@ public class CaseUserService {
         Artist themeArtist = artistRepository.findById(request.artistId())
                 .orElseThrow(NoSuchElementException::new);
 
+        Address newAddress = AddressUtil.parseAddress(request.address());
+
+        Address address = addressRepository.findByCityAndDistrictAndStreet(
+                newAddress.getCity(),
+                newAddress.getDistrict(),
+                newAddress.getStreet()
+        ).orElseThrow(NoSuchElementException::new);
+
         CaseUser caseUser = CaseUser.builder()
-                .address(AddressUtil.parseAddress(request.address()))
+                .address(address)
                 .nickname(request.nickname())
                 .profileLink(request.profileLink())
                 .themeArtist(themeArtist)
                 .build();
 
-        httpSession.setAttribute("userId",caseUser.getCaseUserId());
-        caseUserRepository.save(caseUser);
+        CaseUser registeredUser = caseUserRepository.save(caseUser);
+        httpSession.setAttribute("userId",registeredUser.getCaseUserId());
     }
 
     public CaseUserDetailResponse getCaseUserDetail(Long userId) {

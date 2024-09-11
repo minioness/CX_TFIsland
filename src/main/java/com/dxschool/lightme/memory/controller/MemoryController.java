@@ -18,12 +18,12 @@ public class MemoryController {
     private final MemoryService memoryService;
 
     @GetMapping
-    public ResponseEntity<List<MemoryResponse>> getMemories(@User Long userId) {
+    public ResponseEntity<List<MemoryResponse>> getMemories(@SessionAttribute(name = "userId") Long userId) {
         return ResponseEntity.ok(memoryService.findAll(userId));
     }
 
     @PostMapping
-    public ResponseEntity<Void> createMemory(@RequestBody MemoryRequest memoryRequest, @User Long userId) {
+    public ResponseEntity<Void> createMemory(@RequestBody MemoryRequest memoryRequest, @SessionAttribute(name = "userId") Long userId) {
         memoryService.createMemory(userId, memoryRequest);
         return ResponseEntity.noContent().build();
     }

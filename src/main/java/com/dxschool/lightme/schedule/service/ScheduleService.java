@@ -5,7 +5,6 @@ import com.dxschool.lightme.caseuser.domain.repository.CaseUserRepository;
 import com.dxschool.lightme.schedule.controller.dto.ArtistScheduleResponse;
 import com.dxschool.lightme.schedule.controller.dto.ScheduleResponse;
 import com.dxschool.lightme.schedule.controller.dto.UserScheduleResponse;
-import com.dxschool.lightme.schedule.domain.UserSchedule;
 import com.dxschool.lightme.schedule.domain.repository.ArtistScheduleRepository;
 import com.dxschool.lightme.schedule.domain.repository.UserScheduleRepository;
 import lombok.RequiredArgsConstructor;

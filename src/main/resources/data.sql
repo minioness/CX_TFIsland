@@ -1,26 +1,49 @@
--- Artist 데이터 삽입
+-- Artist 데이터 생성
 INSERT INTO artist (artist_id, artist_name, color, company, logo, score)
-VALUES (1, 'Artist 1', 'FF5733', 'Company A', 'https://linkto.logo1.com', 0);
+VALUES (1, 'Artist A', 'FF5733', 'Company A', 'https://linkto.logo1.com', 0),
+       (2, 'Artist B', '00FF00', 'Company B', 'https://linkto.logo2.com', 0);
 
-INSERT INTO artist (artist_id, artist_name, color, company, logo, score)
-VALUES (2, 'Artist 2', '33FF57', 'Company B', 'https://linkto.logo2.com', 0);
+-- Address 데이터 생성 (Assuming Address is another entity with address_id)
+INSERT INTO address (address_id, city, district, street)
+VALUES (1, '서울특별시', '관악구', '봉천동'),
+       (2, '대구광역시', '북구', '매천동');
 
--- ArtistSchedule 데이터 삽입 (Artist 1의 스케줄 3개)
+-- CaseUser 데이터 생성
+INSERT INTO case_user (case_user_id, nickname, brightness, color, point, profile_link, theme_artist_artist_id, address_id)
+VALUES (1, 'User1', 0, 'FFFFFF', 0, 'https://profile1.com', 1, 1),
+       (2, 'User2', 0, 'AAAAAA', 0, 'https://profile2.com', 2, 2);
+
+-- Memory 데이터 생성
+INSERT INTO memory (memory_id, created_at, title, content, color, memory_date, created_by_case_user_id)
+VALUES (1, NOW(), 'First Memory', 'This is the content of the first memory', 'FFFFFF', '2024-09-10', 1),
+       (2, NOW(), 'Second Memory', 'This is the content of the second memory', 'FF5733', '2024-09-11', 2);
+
+-- Mission 데이터 생성
+INSERT INTO mission (mission_id, reward, title, description, artist_artist_id)
+VALUES (1, 1000, 'First Mission', 'Complete the first mission', 1),
+       (2, 2000, 'Second Mission', 'Complete the second mission', 2);
+
+-- ArtistSchedule 데이터 생성
 INSERT INTO artist_schedule (artist_schedule_id, category, title, scheduled_at, latitude, longitude, artist_artist_id)
-VALUES (1, 'CONCERT', 'Artist 1 Concert in Seoul', '2024-09-15T18:00:00', 37.5665, 126.9780, 1);
+VALUES (1, 'CONCERT', 'First Concert', '2024-09-12 19:00:00', 37.7749, -122.4194, 1),
+       (2, 'FAN_SIGN', 'First Fan Meeting', '2024-09-13 14:00:00', 40.7128, -74.0060, 2);
 
-INSERT INTO artist_schedule (artist_schedule_id, category, title, scheduled_at, latitude, longitude, artist_artist_id)
-VALUES (2, 'FAN_SIGN', 'Artist 1 Fan Sign Event', '2024-10-01T15:00:00', 37.5128, 127.1025, 1);
+-- UserSchedule 데이터 생성
+INSERT INTO user_schedule (user_schedule_id, category, title, scheduled_at, latitude, longitude, user_case_user_id)
+VALUES (1, 'BIRTHDAY', 'User1 Schedule', '2024-09-12 10:00:00', 34.0522, -118.2437, 1),
+       (2, 'BIRTHDAY_CAFE', 'User2 Schedule', '2024-09-14 16:00:00', 51.5074, -0.1278, 2);
 
-INSERT INTO artist_schedule (artist_schedule_id, category, title, scheduled_at, latitude, longitude, artist_artist_id)
-VALUES (3, 'BIRTHDAY', 'Artist 1 Birthday', '2024-09-20T20:00:00', 37.5530, 126.9375, 1);
+-- Image 데이터 생성 (optional, assuming Image is another entity with a case_user relationship)
+INSERT INTO image (image_id, image_url, case_user_id)
+VALUES (1, 'https://image1.com', 1),
+       (2, 'https://image2.com', 2);
 
--- ArtistSchedule 데이터 삽입 (Artist 2의 스케줄 3개)
-INSERT INTO artist_schedule (artist_schedule_id, category, title, scheduled_at, latitude, longitude, artist_artist_id)
-VALUES (4, 'CONCERT', 'Artist 2 Concert in Busan', '2024-09-25T18:00:00', 35.1796, 129.0756, 2);
+-- Music 데이터 생성
+INSERT INTO music (music_id, title, artist_artist_id, case_user_id)
+VALUES (1, 'Music1', 1, 1),
+       (2, 'Music2', 2, 2);
 
-INSERT INTO artist_schedule (artist_schedule_id, category, title, scheduled_at, latitude, longitude, artist_artist_id)
-VALUES (5, 'FAN_SIGN', 'Artist 2 Fan Sign', '2024-10-05T15:00:00', 35.1028, 129.0403, 2);
-
-INSERT INTO artist_schedule (artist_schedule_id, category, title, scheduled_at, latitude, longitude, artist_artist_id)
-VALUES (6, 'BIRTHDAY', 'Artist 2 Birthday', '2024-09-30T21:00:00', 35.1796, 129.0756, 2);
+-- Video 데이터 생성
+INSERT INTO video (video_id, title, video_url, case_user_id)
+VALUES (1, 'Video1', 'https://video1.com', 1),
+       (2, 'Video2', 'https://video2.com', 2);

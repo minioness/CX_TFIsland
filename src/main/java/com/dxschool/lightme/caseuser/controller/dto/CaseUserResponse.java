@@ -9,7 +9,7 @@ public record CaseUserResponse(
     long point,
     String profileUrl,
     String nickname,
-    String address
+    AddressResponse address
 ) {
     public static CaseUserResponse from(CaseUser caseUser) {
         return new CaseUserResponse(
@@ -19,7 +19,7 @@ public record CaseUserResponse(
                 caseUser.getPoint(),
                 caseUser.getProfileLink(),
                 caseUser.getNickname(),
-                caseUser.getAddress().toString()
+                AddressResponse.from(caseUser.getAddress())
         );
     }
 }
