@@ -1,4 +1,4 @@
-package com.dxschool.lightme.domain;
+package com.dxschool.lightme.mission.domain;
 
 
 public enum MissionStatus {

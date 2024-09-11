@@ -1,8 +1,7 @@
-package com.dxschool.lightme.domain;
+package com.dxschool.lightme.mission.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.ColumnDefault;
 
 @Getter
 @Builder
@@ -14,6 +13,6 @@ public class MissionLog {
     private MissionId missionLogId;
 
     @Enumerated(EnumType.STRING)
-    @ColumnDefault("NOT_STARTED")
-    private MissionStatus status;
+    @Setter
+    private MissionStatus status = MissionStatus.NOT_STARTED;
 }

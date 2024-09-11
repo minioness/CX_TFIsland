@@ -1,5 +1,6 @@
-package com.dxschool.lightme.domain;
+package com.dxschool.lightme.mission.domain;
 
+import com.dxschool.lightme.artist.domain.Artist;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.ColumnDefault;

@@ -1,4 +1,4 @@
-package com.dxschool.lightme.domain;
+package com.dxschool.lightme.common.domain;
 
 import lombok.RequiredArgsConstructor;
 
