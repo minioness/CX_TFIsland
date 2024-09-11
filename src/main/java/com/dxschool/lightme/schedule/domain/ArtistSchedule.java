@@ -1,5 +1,7 @@
-package com.dxschool.lightme.domain;
+package com.dxschool.lightme.schedule.domain;
 
+import com.dxschool.lightme.artist.domain.Artist;
+import com.dxschool.lightme.common.domain.Category;
 import jakarta.persistence.*;
 import lombok.*;
 

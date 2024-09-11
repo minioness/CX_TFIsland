@@ -1,4 +1,4 @@
-package com.dxschool.lightme.domain;
+package com.dxschool.lightme.artist.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,10 +15,10 @@ public class Artist {
     private String artistName;
 
     @Column(length = 6)
-    private String colorCode;
+    private String color;
 
     private String company;
-    private String logoLink;
+    private String logo;
 
     @ColumnDefault("0")
     private long score;

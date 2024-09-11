@@ -1,7 +1,7 @@
-package com.dxschool.lightme.caseuser.controller.dto;
+package com.dxschool.lightme.schedule.controller.dto;
 
 import com.dxschool.lightme.common.domain.Category;
-import com.dxschool.lightme.caseuser.domain.UserSchedule;
+import com.dxschool.lightme.schedule.domain.UserSchedule;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
