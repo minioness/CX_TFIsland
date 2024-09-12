@@ -4,7 +4,8 @@ public record CaseUserRequest(
     Long artistId,
     String nickname,
     String address,
-    String profileLink
+    String profileLink,
+    String intro
 ) {
 
 }

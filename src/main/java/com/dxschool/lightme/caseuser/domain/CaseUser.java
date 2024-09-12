@@ -31,6 +31,8 @@ public class CaseUser {
 
     private String profileLink;
 
+    private String intro;
+
     @ManyToOne
     @JoinColumn(nullable = false)
     private Artist themeArtist;

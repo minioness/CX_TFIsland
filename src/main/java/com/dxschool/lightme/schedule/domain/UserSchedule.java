@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
-public class UserSchedule {
+public class UserSchedule implements Schedule{
     @Id
     @GeneratedValue
     private Long userScheduleId;
@@ -34,4 +34,14 @@ public class UserSchedule {
 
     @ManyToOne
     private CaseUser user;
+
+    @Override
+    public LocalDateTime scheduledAt() {
+        return this.scheduledAt;
+    }
+
+    @Override
+    public String title() {
+        return this.title;
+    }
 }

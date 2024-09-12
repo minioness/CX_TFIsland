@@ -1,6 +1,6 @@
 package com.dxschool.lightme.schedule.controller;
 
-import com.dxschool.lightme.caseuser.controller.User;
+import com.dxschool.lightme.schedule.controller.dto.RecentScheduleResponse;
 import com.dxschool.lightme.schedule.controller.dto.ScheduleResponse;
 import com.dxschool.lightme.schedule.service.ScheduleService;
 import lombok.RequiredArgsConstructor;
@@ -20,5 +20,10 @@ public class ScheduleController {
     @GetMapping
     public ResponseEntity<ScheduleResponse> getSchedules(@SessionAttribute(name = "userId") Long userId) {
         return ResponseEntity.ok(scheduleService.findAll(userId));
+    }
+
+    @GetMapping("/recent")
+    public ResponseEntity<RecentScheduleResponse> getRecentSchedule(@SessionAttribute(name = "userId") Long userId) {
+        return ResponseEntity.ok(scheduleService.findRecent(userId));
     }
 }
