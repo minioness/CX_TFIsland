@@ -6,7 +6,7 @@ import lombok.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Getter
+@Getter @Setter
 @Builder
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -55,8 +55,4 @@ public class CaseUser {
     @ManyToOne
     @JoinColumn(name = "address_id")
     private Address address;
-
-    public void updateThemeArtist(Artist artist) {
-        this.themeArtist = artist;
-    }
 }

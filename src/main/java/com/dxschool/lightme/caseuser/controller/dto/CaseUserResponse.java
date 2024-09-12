@@ -3,7 +3,7 @@ package com.dxschool.lightme.caseuser.controller.dto;
 import com.dxschool.lightme.caseuser.domain.CaseUser;
 
 public record CaseUserResponse(
-    Long artistId,
+    String artist,
     int brightness,
     String colorCode,
     long point,
@@ -14,7 +14,7 @@ public record CaseUserResponse(
 ) {
     public static CaseUserResponse from(CaseUser caseUser) {
         return new CaseUserResponse(
-                caseUser.getThemeArtist().getArtistId(),
+                caseUser.getThemeArtist().getArtistName(),
                 caseUser.getBrightness(),
                 caseUser.getColor(),
                 caseUser.getPoint(),

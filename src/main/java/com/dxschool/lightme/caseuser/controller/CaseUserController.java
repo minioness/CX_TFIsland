@@ -31,7 +31,7 @@ public class CaseUserController {
     @PatchMapping
     public ResponseEntity<Void> updateUser(@RequestBody CaseUserUpdateRequest request,
                                            @SessionAttribute(name = "userId") Long userId) {
-        caseUserService.updateCaseUser(request.artistId(), userId);
+        caseUserService.updateCaseUser(userId, request);
         return ResponseEntity.noContent().build();
     }
 

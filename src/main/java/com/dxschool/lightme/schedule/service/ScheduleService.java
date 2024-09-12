@@ -5,7 +5,7 @@ import com.dxschool.lightme.caseuser.domain.repository.CaseUserRepository;
 import com.dxschool.lightme.schedule.controller.dto.ArtistScheduleResponse;
 import com.dxschool.lightme.schedule.controller.dto.RecentScheduleResponse;
 import com.dxschool.lightme.schedule.controller.dto.ScheduleResponse;
-import com.dxschool.lightme.schedule.controller.dto.UserScheduleResponse;
+import com.dxschool.lightme.schedule.controller.dto.CaseUserScheduleResponse;
 import com.dxschool.lightme.schedule.domain.ArtistSchedule;
 import com.dxschool.lightme.schedule.domain.Schedule;
 import com.dxschool.lightme.schedule.domain.UserSchedule;
@@ -38,7 +38,7 @@ public class ScheduleService {
                         .map(ArtistScheduleResponse::from)
                         .toList(),
                 userScheduleRepository.findByUser_CaseUserId(userId).stream()
-                        .map(UserScheduleResponse::from)
+                        .map(CaseUserScheduleResponse::from)
                         .toList()
         );
     }

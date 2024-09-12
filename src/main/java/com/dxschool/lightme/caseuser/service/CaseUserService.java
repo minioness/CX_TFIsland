@@ -57,13 +57,33 @@ public class CaseUserService {
     }
 
     @Transactional
-    public void updateCaseUser(Long artistId, Long userId) {
+    public void updateCaseUser(Long userId, CaseUserUpdateRequest request) {
         CaseUser caseUser = caseUserRepository.findById(userId)
                 .orElseThrow(NoSuchElementException::new);
-        Artist artist = artistRepository.findById(artistId)
-                .orElseThrow(NoSuchElementException::new);
 
-        caseUser.updateThemeArtist(artist);
+        if(request.artistId() != null) {
+            Artist artist = artistRepository.findById(request.artistId())
+                    .orElseThrow(NoSuchElementException::new);
+            caseUser.setThemeArtist(artist);
+        }
+
+        if(request.nickname() != null) {
+            caseUser.setNickname(request.nickname());
+        }
+
+        if(request.address() != null) {
+            Address newAddress = AddressUtil.parseAddress(request.address());
+            Address address = addressRepository.findByCityAndDistrictAndStreet(
+                    newAddress.getCity(),
+                    newAddress.getDistrict(),
+                    newAddress.getStreet()
+            ).orElseThrow(NoSuchElementException::new);
+            caseUser.setAddress(address);
+        }
+
+        if(request.intro() != null) {
+            caseUser.setIntro(request.intro());
+        }
     }
 
     public List<CaseUserResponse> findNearby(Long userId) {

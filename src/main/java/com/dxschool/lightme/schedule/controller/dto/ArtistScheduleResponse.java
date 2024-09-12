@@ -8,20 +8,22 @@ import java.time.LocalDateTime;
 
 public record ArtistScheduleResponse(
     Long scheduleId,
-    Category category,
+    Long artistId,
+    String category,
     String title,
     LocalDateTime scheduledAt,
-    BigDecimal latitude,
-    BigDecimal longitude
+    Long latitude,
+    Long longitude
 ) {
     public static ArtistScheduleResponse from(ArtistSchedule schedule) {
         return new ArtistScheduleResponse(
                 schedule.getArtistScheduleId(),
-                schedule.getCategory(),
+                schedule.getArtist().getArtistId(),
+                schedule.getCategory().name(),
                 schedule.getTitle(),
                 schedule.getScheduledAt(),
-                schedule.getLatitude(),
-                schedule.getLongitude()
+                schedule.getLatitude().longValue(),
+                schedule.getLongitude().longValue()
         );
     }
 }
