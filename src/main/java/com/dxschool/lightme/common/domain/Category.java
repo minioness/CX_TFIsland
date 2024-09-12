@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 @RequiredArgsConstructor
 public enum Category {
-    BIRTHDAY_CAFE("생일 카페"),
+    BIRTHDAY_CAFE("생일카페"),
     BIRTHDAY("생일"),
     CONCERT("콘서트"),
     FAN_SIGN("팬싸인회"),

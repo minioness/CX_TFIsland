@@ -1,6 +1,5 @@
 package com.dxschool.lightme.caseuser.controller;
 
-import com.dxschool.lightme.caseuser.controller.dto.CaseUserDetailResponse;
 import com.dxschool.lightme.caseuser.controller.dto.CaseUserRequest;
 import com.dxschool.lightme.caseuser.controller.dto.CaseUserResponse;
 import com.dxschool.lightme.caseuser.controller.dto.CaseUserUpdateRequest;
@@ -21,11 +20,6 @@ public class CaseUserController {
     @GetMapping
     public ResponseEntity<CaseUserResponse> getUserInfo(@SessionAttribute(name = "userId") Long userId) {
         return ResponseEntity.ok(caseUserService.find(userId));
-    }
-
-    @GetMapping("/main")
-    public ResponseEntity<CaseUserDetailResponse> getUserDetailInfo(@SessionAttribute(name = "userId") Long userId) {
-        return ResponseEntity.ok(caseUserService.getCaseUserDetail(userId));
     }
 
     @PostMapping

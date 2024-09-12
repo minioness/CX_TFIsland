@@ -2,22 +2,17 @@ package com.dxschool.lightme.caseuser.service;
 
 import com.dxschool.lightme.caseuser.domain.Address;
 import com.dxschool.lightme.caseuser.domain.repository.AddressRepository;
-import com.dxschool.lightme.schedule.controller.dto.ArtistScheduleResponse;
 import com.dxschool.lightme.artist.service.ArtistService;
 import com.dxschool.lightme.caseuser.controller.dto.*;
 import com.dxschool.lightme.artist.domain.Artist;
-import com.dxschool.lightme.schedule.domain.ArtistSchedule;
 import com.dxschool.lightme.caseuser.domain.CaseUser;
 import com.dxschool.lightme.artist.domain.repository.ArtistRepository;
 import com.dxschool.lightme.caseuser.domain.repository.CaseUserRepository;
 import com.dxschool.lightme.common.util.AddressUtil;
-import jakarta.servlet.http.HttpSession;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.time.Duration;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -29,7 +24,6 @@ public class CaseUserService {
     private final ArtistRepository artistRepository;
     private final AddressRepository addressRepository;
     private final ArtistService artistService;
-    private final HttpSession httpSession;
 
     public CaseUserResponse find(Long userId) {
         CaseUser caseUser = caseUserRepository
@@ -60,31 +54,6 @@ public class CaseUserService {
                 .build();
 
         CaseUser registeredUser = caseUserRepository.save(caseUser);
-        httpSession.setAttribute("userId",registeredUser.getCaseUserId());
-    }
-
-    public CaseUserDetailResponse getCaseUserDetail(Long userId) {
-        CaseUser caseUser = caseUserRepository
-                .findById(userId)
-                .orElseThrow(NoSuchElementException::new);
-
-        ArtistSchedule closestSchedule = artistService.getClosestSchedule(caseUser);
-        int dDay = (int)Duration.between(LocalDateTime.now(), closestSchedule.getScheduledAt()).toDays();
-
-        return CaseUserDetailResponse.of(
-                CaseUserResponse.from(caseUser),
-                caseUser.getImages().stream()
-                        .map(ImageResponse::from)
-                        .toList(),
-                caseUser.getVideos().stream()
-                        .map(VideoResponse::from)
-                        .toList(),
-                caseUser.getPlaylist().stream()
-                        .map(MusicResponse::from)
-                        .toList(),
-                ArtistScheduleResponse.from(closestSchedule),
-                dDay
-        );
     }
 
     @Transactional
