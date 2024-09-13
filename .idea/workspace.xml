@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8714751c-a8d4-4199-a323-4e3e19bfae8f" name="Changes" comment="chore: 초기 데이터 수정(최종)">
+      <change afterPath="$PROJECT_DIR$/android/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/androidTest/java/com/example/tfisland/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/ArchivePageActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/BackSettingPageActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/DeviceSettingPageActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/FanPageActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/InfoPageActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/MapPageActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/MissionPageActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/RankingPageActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/StanPageActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/data/CustomCircleSpan.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/data/EventDecorator.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/data/MemoryDecorator.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/data/ScheduleItem.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/dto/AddressResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/dto/ArtistResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/dto/ArtistScheduleResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/dto/CaseUserDetailResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/dto/CaseUserRequest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/dto/CaseUserResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/dto/CaseUserScheduleResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/dto/CaseUserUpdateRequest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/dto/ErrorResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/dto/ImageResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/dto/InitialResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/dto/MemoryRequest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/dto/MemoryResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/dto/MissionLogResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/dto/MissionResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/dto/MusicResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/dto/PointItemResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/dto/PurchaseItemResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/dto/RecentScheduleResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/dto/ScheduleResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/dto/VideoResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/dto/enumuration/Category.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/network/ApiService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/network/NetworkModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/repository/ArtistRepositoryImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/repository/CaseUserRepositoryImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/repository/MemoryRepositoryImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/repository/MissionRepositoryImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/repository/PointItemRepositoryImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/model/repository/ScheduleRepositoryImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/ui/theme/Color.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/ui/theme/Theme.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/ui/theme/Type.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/viewmodel/FanPageViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/viewmodel/InfoPageViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/viewmodel/MainPageViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/viewmodel/StanPageViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/viewmodel/factory/FanPageViewModelFactory.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/viewmodel/factory/InfoPageViewModelFactory.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/example/tfisland/viewmodel/factory/MainPageViewModelFactory.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/archive_img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/back_setting_img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/default_profile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/device_setting_img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/emotion_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/emotion_image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/ic_mic_next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/ic_mic_prev.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/image2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/input_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/map_img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/mission_img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/my_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/profile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/ranking_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/ranking_img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/drawable/schedule_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/layout/archive_page.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/layout/back_setting_page.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/layout/device_setting_page.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/layout/fan_page.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/layout/info_page.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/layout/main_page.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/layout/map_page.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/layout/mission_page.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/layout/ranking_page.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/layout/stan_page.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-anydpi/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/test/java/com/example/tfisland/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/gradle/libs.versions.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/backend/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/backend/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/backend/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/backend/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/backend/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/LightmeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/LightmeApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/artist/controller/ArtistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/artist/controller/ArtistController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/artist/controller/dto/ArtistResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/artist/controller/dto/ArtistResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/artist/domain/Artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/artist/domain/Artist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/artist/domain/repository/ArtistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/artist/domain/repository/ArtistRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/artist/service/ArtistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/artist/service/ArtistService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/caseuser/controller/CaseUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/caseuser/controller/CaseUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/caseuser/controller/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/caseuser/controller/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/caseuser/controller/UserArgumentResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/caseuser/controller/UserArgumentResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/caseuser/controller/dto/AddressResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/caseuser/controller/dto/AddressResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/caseuser/controller/dto/CaseUserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/caseuser/controller/dto/CaseUserRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/caseuser/controller/dto/CaseUserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/caseuser/controller/dto/CaseUserResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/caseuser/controller/dto/CaseUserUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/caseuser/controller/dto/CaseUserUpdateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/caseuser/controller/dto/ImageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/caseuser/controller/dto/ImageResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/caseuser/controller/dto/MusicResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/caseuser/controller/dto/MusicResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/caseuser/controller/dto/VideoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/caseuser/controller/dto/VideoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/caseuser/domain/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/caseuser/domain/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/caseuser/domain/CaseUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/caseuser/domain/CaseUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/caseuser/domain/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/caseuser/domain/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/caseuser/domain/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/caseuser/domain/Music.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/caseuser/domain/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/caseuser/domain/Video.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/caseuser/domain/repository/AddressRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/caseuser/domain/repository/AddressRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/caseuser/domain/repository/CaseUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/caseuser/domain/repository/CaseUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/caseuser/service/CaseUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/caseuser/service/CaseUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/common/ControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/common/ControllerAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/common/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/common/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/common/domain/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/common/domain/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/common/domain/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/common/domain/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/common/domain/SessionInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/common/domain/SessionInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/common/exception/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/common/exception/ErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/common/util/AddressUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/common/util/AddressUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/memory/controller/MemoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/memory/controller/MemoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/memory/controller/dto/MemoryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/memory/controller/dto/MemoryRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/memory/controller/dto/MemoryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/memory/controller/dto/MemoryResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/memory/domain/Memory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/memory/domain/Memory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/memory/domain/repository/MemoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/memory/domain/repository/MemoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/memory/service/MemoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/memory/service/MemoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/mission/controller/MissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/mission/controller/MissionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/mission/controller/dto/MissionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/mission/controller/dto/MissionResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/mission/domain/Mission.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/mission/domain/Mission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/mission/domain/MissionId.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/mission/domain/MissionId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/mission/domain/MissionLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/mission/domain/MissionLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/mission/domain/MissionStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/mission/domain/MissionStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/mission/domain/repository/MissionLogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/mission/domain/repository/MissionLogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/mission/domain/repository/MissionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/mission/domain/repository/MissionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/mission/service/MissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/mission/service/MissionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/schedule/controller/ScheduleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/schedule/controller/ScheduleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/schedule/controller/dto/ArtistScheduleResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/schedule/controller/dto/ArtistScheduleResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/schedule/controller/dto/CaseUserScheduleResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/schedule/controller/dto/CaseUserScheduleResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/schedule/controller/dto/RecentScheduleResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/schedule/controller/dto/RecentScheduleResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/schedule/controller/dto/ScheduleResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/schedule/controller/dto/ScheduleResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/schedule/domain/ArtistSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/schedule/domain/ArtistSchedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/schedule/domain/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/schedule/domain/Schedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/schedule/domain/UserSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/schedule/domain/UserSchedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/schedule/domain/repository/ArtistScheduleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/schedule/domain/repository/ArtistScheduleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/schedule/domain/repository/UserScheduleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/schedule/domain/repository/UserScheduleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dxschool/lightme/schedule/service/ScheduleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/schedule/service/ScheduleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dxschool/lightme/LightmeApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/dxschool/lightme/LightmeApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dxschool/lightme/artist/service/ArtistServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/dxschool/lightme/artist/service/ArtistServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/resources/application.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lightme" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lightme" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Record" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;yun8565&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/minioness/CX_TFIsland&quot;,
+    &quot;accountId&quot;: &quot;41b3f984-bf16-47b8-a8a6-c80328f60347&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2lrIBIol7t30OJEh49gq3gWyyMv" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Gradle.ArtistServiceTest.executor": "Run",
+    "Gradle.Build CX_TFIsland.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.LightmeApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/trainee129/Desktop/CX_TFIsland/backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql",
+      "h2"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\trainee129\Desktop\CX_TFIsland\android" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\trainee129\Desktop\CX_TFIsland\backend" />
+      <recent name="C:\Users\trainee129\Desktop\CX_TFIsland" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.LightmeApplication">
+    <configuration name="ArtistServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.dxschool.lightme.artist.service.ArtistServiceTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="LightmeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="lightme.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dxschool.lightme.LightmeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.ArtistServiceTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8714751c-a8d4-4199-a323-4e3e19bfae8f" name="Changes" comment="" />
+      <created>1725931633764</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725931633764</updated>
+      <workItem from="1725931634958" duration="23768000" />
+      <workItem from="1726014603784" duration="9062000" />
+      <workItem from="1726023747549" duration="1706000" />
+      <workItem from="1726042181029" duration="3229000" />
+      <workItem from="1726045963413" duration="4124000" />
+      <workItem from="1726050293110" duration="2742000" />
+      <workItem from="1726100519969" duration="14493000" />
+      <workItem from="1726122875081" duration="13513000" />
+      <workItem from="1726185877484" duration="6915000" />
+    </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1725931934099</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725931934099</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: 엔티티 클래스 추가">
+      <option name="closed" value="true" />
+      <created>1725940213379</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725940213379</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: 케이스 사용자 관련 기능 구현">
+      <option name="closed" value="true" />
+      <created>1726016343961</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1726016343961</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: 아티스트, 일정 관련 기능 구현">
+      <option name="closed" value="true" />
+      <created>1726019465928</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1726019465928</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: 추억 관련 기능 구현">
+      <option name="closed" value="true" />
+      <created>1726019502497</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1726019502497</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: 근처 사용자를 조회하는 기능 추가">
+      <option name="closed" value="true" />
+      <created>1726023469368</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1726023469368</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: 미션 기능 구현">
+      <option name="closed" value="true" />
+      <created>1726023573903</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1726023573903</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix: JPA 오류 해결&#10;- @ColumnDefault에 문자열을 넣으려면 ''로 감싸야함">
+      <option name="closed" value="true" />
+      <created>1726025416499</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1726025416499</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: db 연결 및 초기 데이터 추가">
+      <option name="closed" value="true" />
+      <created>1726053061363</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1726053061363</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: 세션 임의로 생성하는 필터 추가">
+      <option name="closed" value="true" />
+      <created>1726105061330</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1726105061330</updated>
+    </task>
+    <task id="LOCAL-00011" summary="refactor: 일정 조회 로직 수정">
+      <option name="closed" value="true" />
+      <created>1726105120357</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1726105120357</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix: 필드 매핑 오류 해결&#10;- 직렬화/역직렬화 과정에서 오류가 발생해서 BigDecimal-&gt; Long으로, LocalDateTime은 String으로 변환해서 반환하도록 수정했다.">
+      <option name="closed" value="true" />
+      <created>1726126339826</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1726126339826</updated>
+    </task>
+    <task id="LOCAL-00013" summary="chore: 초기 데이터 수정">
+      <option name="closed" value="true" />
+      <created>1726126408582</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1726126408582</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fix: 필드 매핑 오류 해결">
+      <option name="closed" value="true" />
+      <created>1726195787414</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1726195787414</updated>
+    </task>
+    <task id="LOCAL-00015" summary="chore: 초기 데이터 수정(최종)">
+      <option name="closed" value="true" />
+      <created>1726195806171</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1726195806171</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="feat: 엔티티 클래스 추가" />
+    <MESSAGE value="feat: 케이스 사용자 관련 기능 구현" />
+    <MESSAGE value="feat: 아티스트, 일정 관련 기능 구현" />
+    <MESSAGE value="feat: 추억 관련 기능 구현" />
+    <MESSAGE value="feat: 근처 사용자를 조회하는 기능 추가" />
+    <MESSAGE value="feat: 미션 기능 구현" />
+    <MESSAGE value="fix: JPA 오류 해결&#10;- @ColumnDefault에 문자열을 넣으려면 ''로 감싸야함" />
+    <MESSAGE value="feat: db 연결 및 초기 데이터 추가" />
+    <MESSAGE value="feat: 세션 임의로 생성하는 필터 추가" />
+    <MESSAGE value="refactor: 일정 조회 로직 수정" />
+    <MESSAGE value="fix: 필드 매핑 오류 해결&#10;- 직렬화/역직렬화 과정에서 오류가 발생해서 BigDecimal-&gt; Long으로, LocalDateTime은 String으로 변환해서 반환하도록 수정했다." />
+    <MESSAGE value="chore: 초기 데이터 수정" />
+    <MESSAGE value="fix: 필드 매핑 오류 해결" />
+    <MESSAGE value="chore: 초기 데이터 수정(최종)" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: 초기 데이터 수정(최종)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/com/dxschool/lightme/memory/controller/MemoryController.java</url>
+          <line>24</line>
+          <properties class="com.dxschool.lightme.memory.controller.MemoryController">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

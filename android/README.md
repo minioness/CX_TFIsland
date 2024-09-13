@@ -1,0 +1,1 @@
+<h1>LG DX School 1기 CX 프로젝트 안드로이드 Repository입니다.</h1>

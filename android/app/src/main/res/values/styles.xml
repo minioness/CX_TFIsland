@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CalendarTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@android:color/white</item> <!-- Set text color to white -->
+        <item name="android:textSize">14sp</item> <!-- 적당한 텍스트 크기 지정 -->
+    </style>
+
+    <style name="CalendarHeaderTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@android:color/white</item> <!-- 년도 및 월 텍스트 하얀색 -->
+        <item name="android:textSize">18sp</item> <!-- 년도 및 월 텍스트 크기 -->
+    </style>
+
+    <style name="CalendarWeekDayTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@android:color/white</item> <!-- 요일 텍스트 하얀색 -->
+        <item name="android:textSize">14sp</item> <!-- 요일 텍스트 크기 -->
+    </style>
+
+    <style name="Theme.TFIsland.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    
+</resources>
