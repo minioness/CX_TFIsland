@@ -4,7 +4,7 @@ import com.dxschool.lightme.artist.domain.Artist;
 
 public record ArtistResponse(
         Long artistId,
-        String artistName,
+        String name,
         String color,
         String company,
         String logo

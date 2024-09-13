@@ -1,6 +1,5 @@
 package com.dxschool.lightme.memory.controller;
 
-import com.dxschool.lightme.caseuser.controller.User;
 import com.dxschool.lightme.memory.controller.dto.MemoryRequest;
 import com.dxschool.lightme.memory.controller.dto.MemoryResponse;
 import com.dxschool.lightme.memory.service.MemoryService;
