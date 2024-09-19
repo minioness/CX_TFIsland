@@ -1,4 +1,3 @@
-<h1>LG DX School 1기 CX 프로젝트 [Lightme] Repository입니다.</h1>
 
 <img src="./Photo/Group 52.png" width=100% style="border-radius: 5%">
  
