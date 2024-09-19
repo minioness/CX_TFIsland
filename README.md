@@ -1,4 +1,4 @@
-
+<h1>LG전자 DX School CX Project-TFisland</h1>
 <img src="./Photo/Group 52.png" width=100% style="border-radius: 5%">
  
 # 1. <span style="color: #C8FE2E">Light Me! &#x1F387;</span>
