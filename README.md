@@ -40,22 +40,22 @@
   <summary>유즈케이스</summary>
   
 ### 5-1. 계정
-<img src="./Photo/image-1.png" width="300" style="border-radius: 5%;">
+<img src="./Photo/image-1.png" width="300">
 
 <br>
 
 ### 5-2. 설정 기능
-<img src="./Photo/image-2.png" width="300" style="border-radius: 5%;">
+<img src="./Photo/image-2.png" width="600">
 
 <br>
 
 ### 5-3. 사용자 인터랙션 기능
-<img src="./Photo/image-3.png" width="300" style="border-radius: 5%;">
+<img src="./Photo/image-3.png" width="600">
 
 <br>
 
 ### 5-4. 팬덤 활동 및 관리 기능
-<img src="./Photo/image-4.png" width="300" style="border-radius: 5%;">
+<img src="./Photo/image-4.png" width="600">
 </details>
 
 ## 6. 화면 설계서
@@ -63,18 +63,18 @@
     <summary>UI 설계</summary>
   
 ### 6-1. 메인화면 & 계정 설정
-<img src="https://github.com/user-attachments/assets/63de07f6-4ff0-4bf6-8295-a7e24e5b6b56" width="500" style="border-radius: 5%;">
+<img src="https://github.com/user-attachments/assets/63de07f6-4ff0-4bf6-8295-a7e24e5b6b56" width="500">
 
  
 ### 6-2. 덕질 인생 페이지
-<img src="https://github.com/user-attachments/assets/eb12cbef-46c5-4d02-a73b-9a300379fb71" width="600" style="border-radius: 5%;">
+<img src="https://github.com/user-attachments/assets/eb12cbef-46c5-4d02-a73b-9a300379fb71" width="600">
  
 ### 6-3. 팬덤 놀이터 페이지
-<img src="https://github.com/user-attachments/assets/253e726a-bb63-40b0-80b6-a3db664d6fa5" width="700" style="border-radius: 5%;">
+<img src="https://github.com/user-attachments/assets/253e726a-bb63-40b0-80b6-a3db664d6fa5" width="700">
 
  
 ### 6-4. 배경 & 기기 설정 페이지
-<img src="https://github.com/user-attachments/assets/4bf5eb0c-d9f8-4099-a9da-f37145773742" width="500" style="border-radius: 5%;">
+<img src="https://github.com/user-attachments/assets/4bf5eb0c-d9f8-4099-a9da-f37145773742" width="500">
 </details>
 
 
